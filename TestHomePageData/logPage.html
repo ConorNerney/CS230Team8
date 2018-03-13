@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <title>Food For Thought</title>
+  <link rel="stylesheet" type="text/css" href="TestHomePageStyleSheet.css" />
+  <!--link for search bar button style below -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="logPageStyle.css" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="logPageScript.js"></script>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <div class="topnav">
+    <h1>Food For Thought</h1>
+  <a class="active" href="TestHomePage.html">Home</a>
+  <a href="BlogPage.html">Blog</a>
+  <a href="#contact">Contact</a>
+  <a href="#diary">Diary</a>
+  <a href="#about">About</a>
+  <a href="#ContactUs">Contact Us</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<!-- End of nav bar -->
+
+<div class="row">
+  <!-- left hand side of page column-->
+  <div class="column">
+    <div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#search">Search</a></li>
+    <li><a data-toggle="tab" href="#diary">Diary</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Search" class="tab-pane fade in active">
+      <h3>Search</h3>
+      <div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="Search for food">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+ </div>
+</div>
+    <div id="Diary" class="tab-pane fade">
+      <h3>Diary</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+
+  <!--start of from for logging food-->
+  <div id=foodInput>
+  <h1 align="center">Diary</h1>
+  <form method="GET" id="my_form"></form>
+
+    <table id="resultsTable" align="center" class="rt" >
+      <tr>
+        <th class="rt-a">Food</th>
+        <th class="rt-a">Quantity</th>
+        <th class="rt-a">Calories</th>
+        <th class="rt-a">Protein</th>
+        <th class="rt-a">   Fat   </th>
+      </tr>
+
+<!--Student 1 -->
+      <tr>
+        <td class="b" contenteditable="true">
+          <input type="text" name="food" form="my_form" /> <!--gets the input as a form so we can use value-->
+        </td>
+        <td class="b" contenteditable="true">
+          <input type="text" name="amount" form="my_form" /> <!--gets the input as a form so we can use value-->
+        </td>
+        <td class="b" contenteditable="false">-</td>
+        <td class="b" contenteditable="false">-</td>
+        <td id="rt-1" class="rt-c" contenteditable="false">-</td>
+      </tr>
+
+    </table>
+    <br />
+
+    <div align="center">
+      <button type="submit" onClick="addRow();">Add to log</button>
+    </div>
+  </div>
+<!--end of food logging form-->
+
+</div>
+<!--end left column-->
+
+  <!--right hand side of the page column-->
+  <div class="column" >
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+  </div>
+  <!--end right column-->
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>
